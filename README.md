@@ -16,4 +16,4 @@ Return data on one submission:
 
 Return data on multiple submissions:
 
-`GBAPI_GetMulti ( array $p_aItemType, array $p_aItemId, array $p_aFields [, bool $p_bReturnObject] )`
+`GBAPI_GetMulti ( array $p_aItemTypes, array $p_aItemIds, array $p_aFields [, bool $p_bReturnObject] )`
