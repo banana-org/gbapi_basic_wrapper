@@ -19,7 +19,7 @@ function GBAPI_Get($p_sItemType,$p_sItemId,$p_aFields,$p_bReturnObject=false)
 	return json_decode($_jsonResponse);
 }
 
-function GBAPI_GetMulti($p_aItemType,$p_aItemId,$p_aFields,$p_bReturnObject=false)
+function GBAPI_GetMulti($p_aItemTypes,$p_aItemIds,$p_aFields,$p_bReturnObject=false)
 {
 	$_sApiCall = API_URL."/Core/Item/Data";
 	
@@ -29,8 +29,8 @@ function GBAPI_GetMulti($p_aItemType,$p_aItemId,$p_aFields,$p_bReturnObject=fals
 	}
 	
 	$_sApiCall .= "?".http_build_query(array(
-		"itemtype" => $p_aItemType,
-		"itemid" => $p_aItemId,
+		"itemtype" => $p_aItemTypes,
+		"itemid" => $p_aItemIds,
 		"fields" => $p_aFields,
 	));
 	
